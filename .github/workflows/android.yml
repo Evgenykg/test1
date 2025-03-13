@@ -25,9 +25,3 @@ jobs:
 
       - name: Build APK
         run: ./gradlew assembleDebug
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v3.1.0
-        with:
-          name: azimuthphotoapp-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
