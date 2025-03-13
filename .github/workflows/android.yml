@@ -20,8 +20,10 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
 
-      - name: Grant execute permission to gradlew
-        run: chmod +x ./gradlew
+      - name: Grant execute permissions
+        run: |
+          chmod +x ./gradlew
+          chmod +x ./gradle/wrapper/gradle-wrapper.jar
 
       - name: Build APK
         run: ./gradlew assembleDebug
